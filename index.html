@@ -74,7 +74,7 @@
         </div>
       </div>
     </div>
-    <main>
+    <main id="main">
         <div class="header">
           <form action="" class="search">
             <button class="search-icon">
@@ -85,12 +85,12 @@
               </svg>
             </button>
             <div class="search-input">
-              <input class="search-input-item" type="text" placeholder="Nhập tên bài hát, nghệ sĩ hoặc MV…" value="">
+              <input class="search-input-item" id="myInput" type="text" placeholder="Nhập tên bài hát, nghệ sĩ hoặc MV…" value="">
             </div>
           </form>
           <div class="tool">
-            <a href="#" class="upgrade">Login</a>
-            <a href="#" class="upgrade">Sign up</a>
+            <a href="#" class="upgrade" id="login">Login</a>
+            <a href="#" class="upgrade" id="sign-up">Sign up</a>
           </div>
         </div>
         <div class="content">
@@ -123,9 +123,9 @@
                   <h2 class="heading">Most popular</h2>
                   <span class="count">92 Songs</span>
                 </div>
-                <div class="song-list">
+                <ul class="song-list" id="myList">
 
-                  <div class="song" data-index="0">
+                  <li class="song" data-index="0">
                     <span class="song-index">01</span>
                     <img
                       src="https://cdn.dribbble.com/users/3960463/screenshots/13952774/media/1083c2b91054c7d7ee7c0bd47d60d5e0.png?compress=1&resize=800x600"
@@ -138,8 +138,8 @@
                       <input type="checkbox" name="love" id="love" />
                       <i class="fa fa-heart song-heart"></i>
                     </label>
-                  </div>
-                  <div class="song" data-index="1">
+                  </li>
+                  <li class="song" data-index="1">
                     <span class="song-index">02</span>
                     <img
                       src="https://cdn.dribbble.com/users/3960463/screenshots/14808856/media/09a06e9c0d0f897dd9ea1f038541c495.png?compress=1&resize=1000x750"
@@ -152,8 +152,8 @@
                       <input type="checkbox" name="love" id="love1" />
                       <i class="fa fa-heart song-heart"></i>
                     </label>
-                  </div>
-                  <div class="song" data-index="2">
+                  </li>
+                  <li class="song" data-index="2">
                     <span class="song-index">03</span>
                     <img
                       src="https://cdn.dribbble.com/users/3960463/screenshots/14630140/media/c79331860d7ca1b97430a4888617f428.png?compress=1&resize=1000x750"
@@ -166,8 +166,8 @@
                       <input type="checkbox" name="love" id="love2" />
                       <i class="fa fa-heart song-heart"></i>
                     </label>
-                  </div>
-                  <div class="song" data-index="3">
+                  </li>
+                  <li class="song" data-index="3">
                     <span class="song-index">04</span>
                     <img
                       src="https://cdn.dribbble.com/users/3960463/screenshots/14516886/media/bc272ecce9bec415eb28b7fe65e99117.png?compress=1&resize=1000x750"
@@ -180,8 +180,8 @@
                       <input type="checkbox" name="love" id="love3" />
                       <i class="fa fa-heart song-heart"></i>
                     </label>
-                  </div>
-                </div>
+                  </li>
+                </ul>
 
               </div>
               <div class="content-item">
@@ -284,11 +284,66 @@
 
             </div>
           </div>
-          <div class="box-video" id="boxvideo">
-
-          </div>
         </div>
     </main>
+
+    <!-- <div class="login-form" id="loginform"> -->
+      <!-- <h2>Modal Signup Form</h2> -->
+
+      <!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button> -->
+
+      <div id="id01" class="modal1">
+        
+        <form class="modal-content animate " id="form1" action="/action_page.php">
+          <div class="imgcontainer">
+            <h1>Sign up</h1>
+            <p>Please fill in this form to create an account.</p>
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          </div>
+          <div class="container">
+            
+            <hr>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <label for="psw-repeat"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+            
+
+            <div class="clearfix">
+              <button type="submit" class="signupbtn">Sign Up</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div id="id02" class="modal2">
+  
+        <form class="modal-content animate" action="/action_page.php" method="post">
+          
+          <div class="imgcontainer">
+            <h1>Login</h1>
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+              
+            <button type="submit">Login</button>
+          </div>
+    
+        </form>
+      </div>
+      
+    <!-- </div> -->
+    
   </div>
 
   

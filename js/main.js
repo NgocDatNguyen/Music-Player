@@ -74,6 +74,15 @@ var swiper = new Swiper(".mySwiper", {
   // },
 });
 
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myList li").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+
 $("#home").click(function () {
   setTimeout(location.reload.bind(location), 800);
   $("#boxhome").slideDown ();
@@ -102,6 +111,20 @@ $("#boxsinger").click(function () {
   $("#boxvideo").hide();
   $("#boxhome").hide();
 });
+
+$("#sign-up").click(function () {
+  $("#id01").show();
+  // $("#main").hide();
+  // $("#sidebar").hide();
+});
+
+$("#login").click(function () {
+  $("#id02").show();
+  // $("#main").hide();
+  // $("#sidebar").hide();
+});
+
+
 
 let playing = true;
 let random = false;
